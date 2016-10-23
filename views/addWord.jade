@@ -1,0 +1,27 @@
+extends layout
+
+block content
+    div
+        <h3>#{message}</h3>
+        form(class='form' method='POST' action='/addWord')
+            div(class='form-group')
+                label English Word
+                input(type='text' name='name' class='form-control')
+            div(class='form-group')
+                label Finnish Word
+                input(type='text' name='finnish' class='form-control')
+            div(class='form-group')
+                label Meaning
+                input(type='text' name='meaning' class='form-control')
+            div(class='form-group')
+                label Subject          
+                select(class='form-control' name='subject')
+                    option(value='0') Select
+                    option(value='1') Physics
+                    option(value='2') Chemistry
+                    option(value='3') Mathematics
+                    option(value='4') Biology
+                    option(value='5') Finnish
+                    option(value='6') History
+                    option(value='7') psychology      
+            input(class='btn btn-primary' type='submit' value='Add Word')

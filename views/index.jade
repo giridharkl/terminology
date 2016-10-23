@@ -1,0 +1,155 @@
+extends layout
+
+block content
+
+    script(type='text/javascript').
+        //alert("Hello");
+        $(document).ready(function(maths){
+            $('#tableMathematics').DataTable({
+                url: '/mathematics',
+                method: 'get'
+            });
+            $('#tablePhysics').DataTable({
+            });
+            $('#tableChemistry').DataTable({               
+            });
+            $('#tableFinnish').DataTable({               
+            });
+            $('#tableHistory').DataTable({               
+            });
+            $('#tableBiology').DataTable({               
+            });
+            $('#tablepsychology').DataTable({               
+            });
+        });
+                        
+    hr
+    <h3>Terminology of Finnish Words</h3>
+    <br/>
+    ul(class='nav nav-tabs')
+        li(class='active')
+            a(data-toggle="tab" href='#mathematics') Mathematics
+        li
+            a(data-toggle="tab" href='#physics') Physics
+        li
+            a(data-toggle="tab" href='#chemistry') Chemistry
+        li
+            a(data-toggle="tab" href='#finnish') Finnish
+        li
+            a(data-toggle="tab" href='#history') History
+        li
+            a(data-toggle="tab" href='#biology') Biology
+        li
+            a(data-toggle="tab" href='#psychology') Psychology
+        
+    div(class='tab-content')
+        div(id='mathematics' class='tab-pane fade in active')
+            table(id="tableMathematics" class="display" cellspacing="0" width="100%")
+                thead
+                    tr
+                        th Id
+                        th English Word
+                        th Finnish Word
+                        th Meaning
+                each m in maths
+                    tbody
+                        tr
+                            td #{m.id}
+                            td #{m.name}
+                            td #{m.finnish}
+                            td #{m.meaning}
+                            
+        div(id='physics' class='tab-pane fade')
+            table(id="tablePhysics" class="display" cellspacing="0" width="100%")
+                thead
+                    tr
+                        th Id
+                        th English Word
+                        th Finnish Word
+                        th Meaning
+                each p in physics
+                    tbody
+                        tr
+                            td #{p.id}
+                            td #{p.name}
+                            td #{p.finnish}
+                            td #{p.meaning}
+                          
+        div(id='chemistry' class='tab-pane fade')
+            table(id="tableChemistry" class="display" cellspacing="0" width="100%")
+                thead
+                    tr
+                        th Id
+                        th English Word
+                        th Finnish Word
+                        th Meaning
+                each c in chemistry
+                    tbody
+                        tr
+                            td #{c.id}
+                            td #{c.name}
+                            td #{c.finnish}
+                            td #{c.meaning}
+
+        div(id='finnish' class='tab-pane fade')
+            table(id="tableFinnish" class="display" cellspacing="0" width="100%")
+                thead
+                    tr
+                        th Id
+                        th English Word
+                        th Finnish Word
+                each f in finnish
+                    tbody
+                        tr
+                            td #{f.id}
+                            td #{f.name}
+                            td #{f.finnish}
+                    
+        div(id='history' class='tab-pane fade')
+            table(id="tableHistory" class="display" cellspacing="0" width="100%")
+                thead
+                    tr
+                        th Id
+                        th English Word
+                        th Finnish Word
+                        th Meaning
+                each h in history
+                    tbody
+                        tr
+                            td #{h.id}
+                            td #{h.name}
+                            td #{h.finnish}
+                            td #{h.meaning}
+                            
+        div(id='biology' class='tab-pane fade')
+            table(id="tableBiology" class="display" cellspacing="0" width="100%")
+                thead
+                    tr
+                        th Id
+                        th English Word
+                        th Finnish Word
+                        th Meaning
+                each b in biology
+                    tbody
+                        tr
+                            td #{b.id}
+                            td #{b.name}
+                            td #{b.finnish}
+                            td #{b.meaning}
+                            
+        div(id='psychology' class='tab-pane fade')
+            table(id="tablepsychology" class="display" cellspacing="0" width="100%")
+                thead
+                    tr
+                        th Id
+                        th English Word
+                        th Finnish Word
+                        th Meaning
+                each psy in psychology
+                    tbody
+                        tr
+                            td #{psy.id}
+                            td #{psy.name}
+                            td #{psy.finnish}
+                            td #{psy.meaning}
+                            

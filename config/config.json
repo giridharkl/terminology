@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "chiku2000",
+    "database": "terminology",
+    "host": "192.168.8.102",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "postgres",
+    "password": "chiku2000",
+    "database": "terminology",
+    "host": "192.168.8.102",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "postgres",
+    "password": "chiku2000",
+    "database": "terminology",
+    "host": "192.168.8.102",
+    "dialect": "postgres"
+  }
+}
